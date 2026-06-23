@@ -128,12 +128,6 @@ export default function ProductGrid({ products, onAddToCart, cartItemsCount }: P
                       <span className="text-[10px] uppercase tracking-wider font-semibold bg-zinc-950/80 text-indigo-300 px-2.5 py-1 rounded-md border border-zinc-850">
                         {product.category}
                       </span>
-                      {product.isBestSeller && (
-                        <span className="flex items-center gap-1 text-[10px] font-bold bg-amber-550/10 text-amber-500 px-2 py-1 rounded-md border border-amber-500/20 shadow-sm shadow-amber-500/5">
-                          <Star className="h-2.5 w-2.5 fill-amber-500 text-amber-500" />
-                          Terlaris #{product.rank}
-                        </span>
-                      )}
                     </div>
 
                     <div className="relative flex items-center justify-center h-24 mb-4 rounded-xl bg-gradient-to-br from-zinc-950 to-zinc-900/60 group-hover:from-indigo-950/20 group-hover:to-zinc-950 transition-colors border border-zinc-950 group-hover:border-indigo-500/20 overflow-hidden text-zinc-400 group-hover:text-indigo-400">
