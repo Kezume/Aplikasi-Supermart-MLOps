@@ -24,7 +24,8 @@ export default function App() {
   const [toastMessage, setToastMessage] = useState("");
   const [isRetraining, setIsRetraining] = useState(false);
 
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3005";
+  // Jika di Vercel (Produksi) gunakan relative path agar di-proxy oleh vercel.json. Jika di lokal, gunakan localhost.
+  const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:3005" : "");
 
   // Fetch initial data from backend
   useEffect(() => {
