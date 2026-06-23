@@ -1,0 +1,6 @@
+{
+  "name": "Apriori E-Commerce Recommender",
+  "description": "A modern e-commerce web application implementing an Apriori association rule mining model from 30,000 grocery transactions across 40 products.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

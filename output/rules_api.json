@@ -1,0 +1,936 @@
+[
+  {
+    "if_buy": [
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5844,
+    "lift": 2.5111,
+    "support": 0.0951
+  },
+  {
+    "if_buy": [
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4085,
+    "lift": 2.5111,
+    "support": 0.0951
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Apple"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5561,
+    "lift": 2.3896,
+    "support": 0.0142
+  },
+  {
+    "if_buy": [
+      "Apple",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4,
+    "lift": 2.459,
+    "support": 0.0142
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Banana"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5993,
+    "lift": 2.5749,
+    "support": 0.0161
+  },
+  {
+    "if_buy": [
+      "Banana",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4309,
+    "lift": 2.6488,
+    "support": 0.0161
+  },
+  {
+    "if_buy": [
+      "Beans",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5597,
+    "lift": 2.4051,
+    "support": 0.0144
+  },
+  {
+    "if_buy": [
+      "Beans",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3716,
+    "lift": 2.2841,
+    "support": 0.0144
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Bread"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.605,
+    "lift": 2.5995,
+    "support": 0.0161
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Bread"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4227,
+    "lift": 2.5986,
+    "support": 0.0161
+  },
+  {
+    "if_buy": [
+      "Butter",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5889,
+    "lift": 2.5303,
+    "support": 0.0159
+  },
+  {
+    "if_buy": [
+      "Butter",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4105,
+    "lift": 2.5236,
+    "support": 0.0159
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Cheese"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5811,
+    "lift": 2.4969,
+    "support": 0.016
+  },
+  {
+    "if_buy": [
+      "Cheese",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4027,
+    "lift": 2.4755,
+    "support": 0.016
+  },
+  {
+    "if_buy": [
+      "Chicken",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.589,
+    "lift": 2.5307,
+    "support": 0.0157
+  },
+  {
+    "if_buy": [
+      "Chicken",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4137,
+    "lift": 2.5434,
+    "support": 0.0157
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Chickpeas"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5691,
+    "lift": 2.4453,
+    "support": 0.0151
+  },
+  {
+    "if_buy": [
+      "Chickpeas",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4048,
+    "lift": 2.4887,
+    "support": 0.0151
+  },
+  {
+    "if_buy": [
+      "Chips",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5679,
+    "lift": 2.4402,
+    "support": 0.0146
+  },
+  {
+    "if_buy": [
+      "Chips",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3827,
+    "lift": 2.3529,
+    "support": 0.0146
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Chocolate"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5868,
+    "lift": 2.5214,
+    "support": 0.0154
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Chocolate"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3964,
+    "lift": 2.4369,
+    "support": 0.0154
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Cola"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5913,
+    "lift": 2.5405,
+    "support": 0.0153
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Cola"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4082,
+    "lift": 2.5092,
+    "support": 0.0153
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Cookie"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5773,
+    "lift": 2.4806,
+    "support": 0.0168
+  },
+  {
+    "if_buy": [
+      "Cookie",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4394,
+    "lift": 2.7013,
+    "support": 0.0168
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Cracker"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5729,
+    "lift": 2.4618,
+    "support": 0.0144
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Cracker"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3803,
+    "lift": 2.3378,
+    "support": 0.0144
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Cucumber"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5962,
+    "lift": 2.5616,
+    "support": 0.0156
+  },
+  {
+    "if_buy": [
+      "Cucumber",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4041,
+    "lift": 2.4845,
+    "support": 0.0156
+  },
+  {
+    "if_buy": [
+      "Detergent",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.585,
+    "lift": 2.5135,
+    "support": 0.0148
+  },
+  {
+    "if_buy": [
+      "Detergent",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4161,
+    "lift": 2.5581,
+    "support": 0.0148
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Dish Sponge"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5924,
+    "lift": 2.5454,
+    "support": 0.0145
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Dish Sponge"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3993,
+    "lift": 2.4545,
+    "support": 0.0145
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Dumpling"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.58,
+    "lift": 2.492,
+    "support": 0.0149
+  },
+  {
+    "if_buy": [
+      "Dumpling",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3943,
+    "lift": 2.4242,
+    "support": 0.0149
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Egg"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5881,
+    "lift": 2.5269,
+    "support": 0.0158
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Egg"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4263,
+    "lift": 2.6204,
+    "support": 0.0158
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Fish"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5676,
+    "lift": 2.4387,
+    "support": 0.0154
+  },
+  {
+    "if_buy": [
+      "Fish",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3997,
+    "lift": 2.4569,
+    "support": 0.0154
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Flatbread With Meat"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5686,
+    "lift": 2.4433,
+    "support": 0.0155
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Flatbread With Meat"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4203,
+    "lift": 2.5837,
+    "support": 0.0155
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Honey"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5867,
+    "lift": 2.5209,
+    "support": 0.015
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Honey"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4014,
+    "lift": 2.4678,
+    "support": 0.015
+  },
+  {
+    "if_buy": [
+      "Ice Cream",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5872,
+    "lift": 2.5229,
+    "support": 0.0162
+  },
+  {
+    "if_buy": [
+      "Ice Cream",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4121,
+    "lift": 2.5332,
+    "support": 0.0162
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Juice"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5826,
+    "lift": 2.5033,
+    "support": 0.0154
+  },
+  {
+    "if_buy": [
+      "Juice",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3959,
+    "lift": 2.4337,
+    "support": 0.0154
+  },
+  {
+    "if_buy": [
+      "Lentil",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5494,
+    "lift": 2.3607,
+    "support": 0.0139
+  },
+  {
+    "if_buy": [
+      "Lentil",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3743,
+    "lift": 2.3012,
+    "support": 0.0139
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Minced Meat"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5488,
+    "lift": 2.3579,
+    "support": 0.0141
+  },
+  {
+    "if_buy": [
+      "Minced Meat",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3951,
+    "lift": 2.4291,
+    "support": 0.0141
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Onion"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5995,
+    "lift": 2.5759,
+    "support": 0.0158
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Onion"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4102,
+    "lift": 2.5219,
+    "support": 0.0158
+  },
+  {
+    "if_buy": [
+      "Orange",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.602,
+    "lift": 2.5868,
+    "support": 0.0157
+  },
+  {
+    "if_buy": [
+      "Orange",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.409,
+    "lift": 2.5144,
+    "support": 0.0157
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Pizza"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5889,
+    "lift": 2.5302,
+    "support": 0.0148
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Pizza"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.404,
+    "lift": 2.4836,
+    "support": 0.0148
+  },
+  {
+    "if_buy": [
+      "Potato",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5926,
+    "lift": 2.5462,
+    "support": 0.0155
+  },
+  {
+    "if_buy": [
+      "Potato",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.407,
+    "lift": 2.5022,
+    "support": 0.0155
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Rice"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5762,
+    "lift": 2.4757,
+    "support": 0.015
+  },
+  {
+    "if_buy": [
+      "Rice",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3961,
+    "lift": 2.4352,
+    "support": 0.015
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Sausage"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5814,
+    "lift": 2.4982,
+    "support": 0.0152
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Sausage"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4106,
+    "lift": 2.5242,
+    "support": 0.0152
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Shampoo"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5895,
+    "lift": 2.5328,
+    "support": 0.016
+  },
+  {
+    "if_buy": [
+      "Shampoo",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4287,
+    "lift": 2.6354,
+    "support": 0.016
+  },
+  {
+    "if_buy": [
+      "Soap",
+      "Milk"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5619,
+    "lift": 2.4145,
+    "support": 0.0147
+  },
+  {
+    "if_buy": [
+      "Soap",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3897,
+    "lift": 2.3959,
+    "support": 0.0147
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Soda"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5887,
+    "lift": 2.5297,
+    "support": 0.016
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Soda"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4069,
+    "lift": 2.5017,
+    "support": 0.016
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Strawberry"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5942,
+    "lift": 2.5531,
+    "support": 0.015
+  },
+  {
+    "if_buy": [
+      "Cereal",
+      "Strawberry"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4023,
+    "lift": 2.4733,
+    "support": 0.015
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Tomato"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.6047,
+    "lift": 2.5982,
+    "support": 0.0164
+  },
+  {
+    "if_buy": [
+      "Tomato",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4273,
+    "lift": 2.627,
+    "support": 0.0164
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Water"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5764,
+    "lift": 2.4768,
+    "support": 0.0148
+  },
+  {
+    "if_buy": [
+      "Water",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.4042,
+    "lift": 2.4847,
+    "support": 0.0148
+  },
+  {
+    "if_buy": [
+      "Milk",
+      "Yogurt"
+    ],
+    "recommend": [
+      "Cereal"
+    ],
+    "confidence": 0.5599,
+    "lift": 2.406,
+    "support": 0.0146
+  },
+  {
+    "if_buy": [
+      "Yogurt",
+      "Cereal"
+    ],
+    "recommend": [
+      "Milk"
+    ],
+    "confidence": 0.3864,
+    "lift": 2.3757,
+    "support": 0.0146
+  }
+]
