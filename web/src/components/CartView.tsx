@@ -126,7 +126,7 @@ export default function CartView({
             <div>
               <p className="text-zinc-400 font-medium">Keranjang Anda masih kosong</p>
               <p className="text-zinc-500 text-sm mt-1">
-                Tambahkan beberapa produk dari Katalog Belanja untuk mengaktifkan mesin rekomendasi Apriori.
+                Tambahkan beberapa produk dari Katalog Belanja untuk mengaktifkan fitur rekomendasi belanja.
               </p>
             </div>
           </div>

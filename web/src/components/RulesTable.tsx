@@ -163,7 +163,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
       <div className="bg-zinc-900/40 p-5 rounded-2xl border border-zinc-800 backdrop-blur-md space-y-4">
         <h3 className="text-sm font-bold text-zinc-200 flex items-center gap-2">
           <SlidersHorizontal className="h-4 w-4 text-indigo-400" />
-          Filter & Navigasi Model Apriori
+          Filter & Navigasi Aturan Belanja
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -183,7 +183,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
           {/* Lift Slider */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-zinc-950 px-4 py-2 rounded-xl border border-zinc-800">
             <div className="space-y-0.5">
-              <span className="text-xs font-semibold text-zinc-400 block">Minimum Lift Ratio</span>
+              <span className="text-xs font-semibold text-zinc-400 block">Minimal Kekuatan Hubungan</span>
               <span className="text-[10px] text-zinc-500 block">Menyaring kekuatan asosiasi antar produk</span>
             </div>
             <div className="flex items-center gap-3 w-full sm:w-auto">
@@ -216,7 +216,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
                   className="px-6 py-4 cursor-pointer hover:bg-zinc-900/50 hover:text-white transition-colors"
                 >
                   <div className="flex items-center gap-1.5">
-                    Kondisi (Antecedent / if_buy)
+                    Jika Beli Ini
                     <ArrowUpDown className="h-3 w-3 text-zinc-500" />
                   </div>
                 </th>
@@ -225,7 +225,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
                   className="px-6 py-4 cursor-pointer hover:bg-zinc-900/50 hover:text-white transition-colors"
                 >
                   <div className="flex items-center gap-1.5">
-                    Rekomendasi (Consequent)
+                    Maka Akan Beli Ini
                     <ArrowUpDown className="h-3 w-3 text-zinc-500" />
                   </div>
                 </th>
@@ -234,7 +234,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
                   className="px-6 py-4 cursor-pointer hover:bg-zinc-900/50 hover:text-white transition-colors"
                 >
                   <div className="flex items-center gap-1.5">
-                    Support
+                    Frekuensi Terjadi
                     <ArrowUpDown className="h-3 w-3 text-zinc-500" />
                   </div>
                 </th>
@@ -243,7 +243,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
                   className="px-6 py-4 cursor-pointer hover:bg-zinc-900/50 hover:text-white transition-colors"
                 >
                   <div className="flex items-center gap-1.5">
-                    Confidence
+                    Peluang Terbeli Bersama
                     <ArrowUpDown className="h-3 w-3 text-zinc-500" />
                   </div>
                 </th>
@@ -252,8 +252,14 @@ export default function RulesTable({ rules }: RulesTableProps) {
                   className="px-6 py-4 cursor-pointer hover:bg-zinc-900/50 hover:text-white transition-colors"
                 >
                   <div className="flex items-center gap-1.5">
-                    Lift Ratio
+                    Kekuatan Hubungan
                     <ArrowUpDown className="h-3 w-3 text-zinc-500" />
+                  </div>
+                </th>
+                <th className="px-6 py-4 cursor-default">
+                  <div className="flex items-center gap-1.5 text-indigo-400">
+                    <Sparkles className="h-3.5 w-3.5" />
+                    Aksi Bisnis
                   </div>
                 </th>
               </tr>
@@ -261,7 +267,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
             <tbody className="divide-y divide-zinc-800/50 text-sm">
               {filteredAndSortedRules.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-6 py-12 text-center text-zinc-550">
+                  <td colSpan={6} className="px-6 py-12 text-center text-zinc-550">
                     <AlertCircle className="h-8 w-8 text-zinc-600 mx-auto mb-2" />
                     Tidak ada rule asosiasi yang lolos filter pencarian atau minimum Lift anda.
                   </td>
@@ -295,7 +301,7 @@ export default function RulesTable({ rules }: RulesTableProps) {
                               key={i}
                               className="px-2.5 py-1 bg-indigo-950/40 border border-indigo-900/35 text-indigo-300 rounded-md text-xs font-bold"
                             >
-                              ⭐ {item}
+                              {item}
                             </span>
                           ))}
                         </div>
@@ -330,6 +336,32 @@ export default function RulesTable({ rules }: RulesTableProps) {
                           {rule.lift.toFixed(2)}x
                         </span>
                       </td>
+
+                      {/* Business Action Insight */}
+                      <td className="px-6 py-4">
+                        {(() => {
+                          let actionText = "Buat Promo Silang";
+                          let colorClass = "text-zinc-400 bg-zinc-800/50 border-zinc-700/50";
+
+                          // Business Rules Implementation
+                          if (rule.support >= 0.05) {
+                            actionText = "Perbanyak Stok Produk";
+                            colorClass = "text-orange-400 bg-orange-500/10 border-orange-500/20";
+                          } else if (rule.lift >= 2.5) {
+                            actionText = "Buat Paket Bundling";
+                            colorClass = "text-emerald-400 bg-emerald-500/10 border-emerald-500/20";
+                          } else if (rule.lift >= 2.0) {
+                            actionText = "Dekatkan Posisi Rak";
+                            colorClass = "text-amber-400 bg-amber-500/10 border-amber-500/20";
+                          }
+
+                          return (
+                            <span className={`inline-block px-2.5 py-1.5 rounded-md text-[11px] font-bold border ${colorClass}`}>
+                              {actionText}
+                            </span>
+                          );
+                        })()}
+                      </td>
                     </tr>
                   );
                 })
@@ -361,25 +393,25 @@ export default function RulesTable({ rules }: RulesTableProps) {
       <div className="bg-zinc-900/20 border border-zinc-800 p-5 rounded-2xl space-y-4">
         <h4 className="text-sm font-bold text-white flex items-center gap-2">
           <BookOpen className="h-4 w-4 text-indigo-400" />
-          Teori Evaluasi Metrik Data Mining
+          Panduan Membaca Angka untuk Pemilik Toko
         </h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-zinc-400">
           <div className="space-y-1.5 bg-zinc-950/30 p-3.5 rounded-xl border border-zinc-850/60">
-            <strong className="text-zinc-200">1. Support (Keterpilihan)</strong>
+            <strong className="text-zinc-200">1. Frekuensi Terjadi (Support)</strong>
             <p className="leading-relaxed">
-              Persentase transaksi di mana kombinasi barang dari antecedent dan consequent dibeli bersama. Menggambarkan seberapa umum atau populernya pola produk tersebut di dalam total dataset transaksi belanja.
+              Menunjukkan seberapa sering kedua produk ini muncul bersamaan dalam seluruh nota penjualan. Semakin besar angkanya, berarti kombinasi barang ini sangat populer dan paling sering dibeli oleh pelanggan.
             </p>
           </div>
           <div className="space-y-1.5 bg-zinc-950/30 p-3.5 rounded-xl border border-zinc-850/60">
-            <strong className="text-zinc-200">2. Confidence (Keyakinan)</strong>
+            <strong className="text-zinc-200">2. Peluang Terbeli Bersama (Confidence)</strong>
             <p className="leading-relaxed">
-              Peluang bersyarat bahwa pelanggan juga membeli barang rekomendasi, jika mereka sudah memasukkan barang kondisi di keranjang. Dihitung sebagai: <code className="text-[10px] bg-zinc-900 px-1 py-0.5 rounded text-indigo-300 font-mono">Support(A∪B) / Support(A)</code>.
+              Menunjukkan kepastian pelanggan membeli barang kedua setelah mereka mengambil barang pertama di keranjang. Jika peluangnya 80%, berarti dari 100 orang yang beli Roti, 80 orang di antaranya pasti juga mengambil Selai.
             </p>
           </div>
           <div className="space-y-1.5 bg-zinc-950/30 p-3.5 rounded-xl border border-zinc-850/60">
-            <strong className="text-zinc-200">3. Lift Ratio (Kekuatan Asosiasi)</strong>
+            <strong className="text-zinc-200">3. Kekuatan Hubungan (Lift)</strong>
             <p className="leading-relaxed">
-              Mengukur efektivitas aturan asosiasi dibanding jika kedua barang dibeli secara acak independen. Jika <code className="text-white">Lift &gt; 1.0</code>, berarti terdapat korelasi positif yang nyata (pembelian A mendongkrak pembelian B).
+              Mengukur seberapa kuat dorongan barang pertama terhadap barang kedua. Jika nilainya lebih dari <code className="text-white">1.0x</code>, berarti barang pertama terbukti secara nyata mendongkrak penjualan barang kedua (bukan sekadar kebetulan/acak).
             </p>
           </div>
         </div>

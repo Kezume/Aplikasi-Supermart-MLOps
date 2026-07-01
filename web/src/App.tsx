@@ -25,7 +25,7 @@ export default function App() {
   const [isRetraining, setIsRetraining] = useState(false);
 
   // Jika di Vercel (Produksi) gunakan relative path agar di-proxy oleh vercel.json. Jika di lokal, gunakan localhost.
-  const API_BASE_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:3005" : "");
+  const API_BASE_URL = (import.meta as any).env.VITE_API_URL || ((import.meta as any).env.DEV ? "http://localhost:3005" : "");
 
   // Fetch initial data from backend
   useEffect(() => {
@@ -142,7 +142,7 @@ export default function App() {
 
   const handleRetrain = async () => {
     setIsRetraining(true);
-    triggerToast("Memulai retraining model... Silakan tunggu.");
+    triggerToast("Menganalisis data penjualan terbaru... Silakan tunggu.");
     
     try {
       const response = await fetch(`${API_BASE_URL}/api/retrain`, {
@@ -150,17 +150,17 @@ export default function App() {
       });
 
       if (response.ok) {
-        triggerToast("Model berhasil diupdate dengan transaksi terbaru!");
+        triggerToast("Rekomendasi berhasil diperbarui dari transaksi hari ini!");
         // Reload rules
         const rulesRes = await fetch(`${API_BASE_URL}/api/rules`);
         const rulesData = await rulesRes.json();
         setRules(rulesData);
       } else {
-        triggerToast("Gagal update model.");
+        triggerToast("Gagal memperbarui data rekomendasi.");
       }
     } catch (err) {
       console.error(err);
-      triggerToast("Gagal menghubungi server.");
+      triggerToast("Gagal terhubung ke server untuk pembaruan.");
     } finally {
       setIsRetraining(false);
     }
@@ -263,13 +263,13 @@ export default function App() {
             </div>
             <div className="relative z-10">
               <span className="text-[10px] uppercase font-bold text-indigo-400 tracking-widest bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">
-                Dashboard Admin / Mesin Apriori
+                Panel Admin Eksekutif
               </span>
               <h2 className="text-base md:text-lg font-black text-white mt-2 leading-tight">
-                Sistem Pendeteksi Pola Kombinasi Belanja
+                Pusat Analisis & Strategi Penjualan
               </h2>
               <p className="text-sm text-zinc-400 mt-2 max-w-4xl leading-relaxed mb-4">
-                Area ini digunakan untuk mengatur rekomendasi cerdas dari toko. Sistem memproses data riwayat transaksi kasir untuk menghasilkan <strong className="text-indigo-400">Aturan Asosiasi (Association Rules)</strong> baru yang akan ditampilkan ke pelanggan di Keranjang mereka.
+                Area ini digunakan untuk mengatur rekomendasi cerdas dari toko. Sistem akan otomatis memproses data riwayat transaksi kasir untuk menghasilkan <strong className="text-indigo-400">Pola Kombinasi Belanja Terpopuler</strong> terbaru yang akan ditampilkan ke pelanggan di Keranjang mereka.
               </p>
               <div className="flex items-center gap-3">
                 <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-zinc-950 text-emerald-400 border border-zinc-800 text-sm font-bold rounded-xl shadow-inner">
@@ -279,11 +279,11 @@ export default function App() {
                 <button
                   onClick={handleRetrain}
                   disabled={isRetraining}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold rounded-xl cursor-pointer transition-colors shadow-lg shadow-indigo-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <RefreshCw className={`h-4 w-4 ${isRetraining ? "animate-spin" : ""}`} />
-                  {isRetraining ? "Memproses Data..." : "Jalankan Algoritma Ulang"}
-                </button>
+                  className="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 text-sm shadow-lg shadow-indigo-500/20"
+              >
+                <RefreshCw className={`h-4 w-4 ${isRetraining ? "animate-spin" : ""}`} />
+                {isRetraining ? "Menganalisis Data..." : "Sinkronisasi Rekomendasi"}
+              </button>
               </div>
             </div>
           </div>
